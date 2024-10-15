@@ -1,17 +1,20 @@
-import { EditorProvider, FloatingMenu, BubbleMenu } from "@tiptap/react";
-import StarterKit from '@tiptap/starter-kit'
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
+import Home from './landing/home';
+import Login from './auth/Login';
 
-// define your extension array
-const extensions = [StarterKit]
-
-const content = '<p>Hello World!</p>'
 
 function App() {
   return (
-    <EditorProvider extensions={extensions} content={content}>
-      <FloatingMenu editor={null}>This is the floating menu</FloatingMenu>
-      <BubbleMenu editor={null}>This is the bubble menu</BubbleMenu>
-    </EditorProvider>
+    <Router>
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/auth/login">
+          <Login />
+        </Route>
+      </Switch>
+    </Router>
   )
 }
 
