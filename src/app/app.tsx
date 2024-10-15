@@ -1,4 +1,4 @@
-import { useEditor, EditorContent,  EditorProvider, FloatingMenu, BubbleMenu } from "@tiptap/react";
+import { EditorProvider, FloatingMenu, BubbleMenu } from "@tiptap/react";
 import StarterKit from '@tiptap/starter-kit'
 
 // define your extension array
